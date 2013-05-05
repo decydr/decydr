@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Bendlife::Application.load_tasks
+Decydr::Application.load_tasks

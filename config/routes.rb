@@ -1,4 +1,4 @@
-Bendlife::Application.routes.draw do
+Decydr::Application.routes.draw do
 
   resources :events do
     get 'today', :on => :collection    
