@@ -5,19 +5,16 @@
                 <div class="span3">
                 </div>
                 <div class="span9">
-                    <h1>Decydr <span class="rnd">{0.1}</span></h1>
-                    <p></p>
                     <div class="row-fluid">
                         <div class="span5">
-<header>
-  <hgroup>
-    <h1>Decydr</h1>
-    <h2>Your one-stop shop for events and conditions</h2>
-  </hgroup>
-</header>
-                            <h2>Your one-stop shop for events and conditions.</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tellus augue, bibendum id feugiat id, pulvinar vel quam. Nullam ultricies enim a nisi luctus pulvinar sed eget leo.</p>
+                          <header>
+                            <hgroup>
+                              <h1>Decydr <span class="rnd">{0.1}</span></h1>
+                              <h2>Your one-stop shop for events and conditions</h2>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tellus augue, bibendum id feugiat id, pulvinar vel quam. Nullam ultricies enim a nisi luctus pulvinar sed eget leo.</p>
+                            </hgroup>
                             <p><a class="btn" href="#events">See Events Now »</a></p>
+                          </header>
                         </div>
                         <!--/span-->
                   </div>
@@ -42,42 +39,36 @@
                   trail conditions, slope style and weather.</p>
                  <div class="span10">
 <section>
-  <h2>Happening Now</h2>
-  <%= render @events %>
+  <h2>Today:</h2>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+
+        // page is now ready, initialize the calendar...
+
+        $('#calendar').fullCalendar({
+          defaultView: 'basicDay',
+          height: 300,
+          columnFormat: {
+              month: '',    // Mon
+              week: '', // Mon 9/7
+              day: ''  // Monday 9/7
+                      },
+          events: [
+                  <% @events.each_with_index do |event, index| %>
+                  {
+                    title: "<%= event.display_name %>",
+                    start: new Date(<%= event.begin_time.to_i * 1000 %>),
+                    end: new Date(<%= event.end_time.to_i * 1000 %>)
+                  }<%= ',' if index < (@events.length - 1) %>
+                  <% end %>
+                 ]
+        })
+
+    });
+  <% end %>
+  <div id="calendar"></div>
 </section>
 <section id="splash-tables">
-  <section id="events">
-    <h2>Events</h2>
-    <table>
-      <tr><td><%= link_to('Today','') %></td></tr>
-      <tr><td><%= link_to('This Weekend','') %></td></tr>
-      <tr><td><%= link_to('and Beyond','') %></td></tr>
-    </table>
-  </section>
-  <section id="conditions">
-    <h2>Conditions</h2>
-    <table>
-      <tr><td><%= link_to('Today','') %></td></tr>
-      <tr><td><%= link_to('This Weekend','') %></td></tr>
-      <tr><td><%= link_to('and Beyond','') %></td></tr>
-    </table>
-  </section>
-  <section id="providers">
-    <h2>Providers</h2>
-    <table>
-      <tr><td><%= link_to('Today','') %></td></tr>
-      <tr><td><%= link_to('This Weekend','') %></td></tr>
-      <tr><td><%= link_to('and Beyond','') %></td></tr>
-    </table>
-  </section>
-  <section id="gear">
-    <h2>Gear</h2>
-    <table>
-      <tr><td><%= link_to('Today','') %></td></tr>
-      <tr><td><%= link_to('This Weekend','') %></td></tr>
-      <tr><td><%= link_to('and Beyond','') %></td></tr>
-    </table>
-  </section>
 
       <ul class="thumbnails">
         <li class="span3">
