@@ -10,6 +10,7 @@
                           <header>
                             <hgroup>
                               <h1>Decydr <span class="rnd">{0.1}</span></h1>
+                              <%= image_tag 'logo.png' %>
                               <h2>Your one-stop shop for events and conditions</h2>
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tellus augue, bibendum id feugiat id, pulvinar vel quam. Nullam ultricies enim a nisi luctus pulvinar sed eget leo.</p>
                             </hgroup>
@@ -106,7 +107,22 @@
         </li>
       </ul>
 
+      <% if false %>
       <h2>Twitter</h2>
+<section id="twitter">
+  <%= javascript_tag do %>
+    $('#twitter').socialist({
+        networks: [
+            {name:'twitter',id:'mtbachelor'},
+            {name:'twitter',id:'twisitbend'}
+        ],
+        isotope:false,
+        random:false,
+        maxResults: 5,
+        fields:['source','heading','text','date']
+    });
+  <% end %>
+</section>
       <ul class="thumbnails">
         <li class="span3">
           <a href="#" class="thumbnail">
@@ -124,6 +140,7 @@
           </a>
         </li>
       </ul>
+<% end %>
     </div>
 
 
@@ -132,23 +149,3 @@
     </div>
 </div>
 <!--#events-->
-
-
-<section id="twitter">
-  <hgroup>
-    <h2>Twitter</h1>
-  </hgroup>
-
-  <%= javascript_tag do %>
-    $('#twitter').socialist({
-        networks: [
-            {name:'twitter',id:'mtbachelor'},
-            {name:'twitter',id:'twisitbend'}
-        ],
-        isotope:false,
-        random:false,
-        maxResults: 5,
-        fields:['source','heading','text','date']
-    });
-  <% end %>
-</section>
