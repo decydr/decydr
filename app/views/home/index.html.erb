@@ -57,8 +57,9 @@
                   <% @events.each_with_index do |event, index| %>
                   {
                     title: "<%= event.display_name %>",
-                    start: new Date(<%= event.begin_time.to_i * 1000 %>),
-                    end: new Date(<%= event.end_time.to_i * 1000 %>)
+                    start: new Date(<%= event.begin_time.year %>,<%= event.begin_time.month - 1 %>,<%= event.begin_time.day %>,<%= event.begin_time.hour %>,<%= event.begin_time.strftime('%M') %>),
+                    end: new Date(<%= event.end_time.year %>,<%= event.end_time.month - 1%>,<%= event.end_time.day %>,<%= event.end_time.hour %>,<%= event.end_time.strftime('%M') %>),
+                    allDay: false
                   }<%= ',' if index < (@events.length - 1) %>
                   <% end %>
                  ]

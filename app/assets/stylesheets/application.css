@@ -12,6 +12,7 @@
  *= require_tree .
  */
 
+body#page{ color: #fff;}
 h1{
   font-size:5em;
 }
