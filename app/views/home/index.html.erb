@@ -1,51 +1,110 @@
-<header>
-  <hgroup>
-    <h1>Decydr</h1>
-    <h2>Your one-stop shop for events and conditions</h2>
-  </hgroup>
-</header>
+<div id="home">
+    <div class="story">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span3">
+                </div>
+                <div class="span9">
+                    <h1>Decydr <span class="rnd">{0.1}</span></h1>
+                    <p></p>
+                    <div class="row-fluid">
+                        <div class="span5">
+                            <h2>Your one-stop shop for events and conditions.</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tellus augue, bibendum id feugiat id, pulvinar vel quam. Nullam ultricies enim a nisi luctus pulvinar sed eget leo.</p>
+                            <p><a class="btn" href="#events">See Events Now »</a></p>
+                        </div>
+                        <!--/span-->
+                  </div>
+                    <!--/row-->
+                </div>
+                <!--/span-->
+            </div>
+            <!--/row-->
+        </div>
+    </div>
+    <!--.story-->
+</div>
+<!--#intro-->
 
-<section id="splash-tables">
-  <section id="events">
-    <h2>Events</h2>
-    <table>
-      <tr><td><%= link_to('Today','') %></td></tr>
-      <tr><td><%= link_to('This Weekend','') %></td></tr>
-      <tr><td><%= link_to('and Beyond','') %></td></tr>
-    </table>
-  </section>
-  <section id="conditions">
-    <h2>Conditions</h2>
-    <table>
-      <tr><td><%= link_to('Today','') %></td></tr>
-      <tr><td><%= link_to('This Weekend','') %></td></tr>
-      <tr><td><%= link_to('and Beyond','') %></td></tr>
-    </table>
-  </section>
-  <section id="providers">
-    <h2>Providers</h2>
-    <table>
-      <tr><td><%= link_to('Today','') %></td></tr>
-      <tr><td><%= link_to('This Weekend','') %></td></tr>
-      <tr><td><%= link_to('and Beyond','') %></td></tr>
-    </table>
-  </section>
-  <section id="gear">
-    <h2>Gear</h2>
-    <table>
-      <tr><td><%= link_to('Today','') %></td></tr>
-      <tr><td><%= link_to('This Weekend','') %></td></tr>
-      <tr><td><%= link_to('and Beyond','') %></td></tr>
-    </table>
-  </section>
+<!--#events-->
+<div id="events">
+  <div class="container-fluid">
+    <div class="story">
+        <div class="row-fluid">
+                <h1>Events and Conditions <span class="rnd">fresh</span></h1>
+                <p>Stepping outside in Central Oregon? This is your resource to the latest events,
+                  trail conditions, slope style and weather.</p>
+                 <div class="span10">
 
-</section>
+      <ul class="thumbnails">
+        <li class="span3">
+          <h2>Events</h2>
+          <table>
+            <tr><td><%= link_to('Today','') %></td></tr>
+            <tr><td><%= link_to('This Weekend','') %></td></tr>
+            <tr><td><%= link_to('and Beyond','') %></td></tr>
+          </table>
+        </li>
+        <li class="span3">
+          <h2>Conditions</h2>
+          <table>
+            <tr><td><%= link_to('Today','') %></td></tr>
+            <tr><td><%= link_to('This Weekend','') %></td></tr>
+            <tr><td><%= link_to('and Beyond','') %></td></tr>
+          </table>
+        </li>
+        <li class="span3">
+          <h2>Providers</h2>
+          <table>
+            <tr><td><%= link_to('Today','') %></td></tr>
+            <tr><td><%= link_to('This Weekend','') %></td></tr>
+            <tr><td><%= link_to('and Beyond','') %></td></tr>
+          </table>
+        </li>
+        <li class="span3">
+          <h2>Gear</h2>
+          <table>
+            <tr><td><%= link_to('Today','') %></td></tr>
+            <tr><td><%= link_to('This Weekend','') %></td></tr>
+            <tr><td><%= link_to('and Beyond','') %></td></tr>
+          </table>
+        </li>
+      </ul>
+
+      <h2>Twitter</h2>
+      <ul class="thumbnails">
+        <li class="span3">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+          </a>
+        </li>
+        <li class="span3">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+          </a>
+        </li>
+        <li class="span3">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    </div>
+    </div><!--.story-->
+    </div>
+</div>
+<!--#events-->
+
+
 <section id="twitter">
   <hgroup>
     <h2>Twitter</h1>
   </hgroup>
-  
-  <%= javascript_tag do %> 
+
+  <%= javascript_tag do %>
     $('#twitter').socialist({
         networks: [
             {name:'twitter',id:'mtbachelor'},
