@@ -12,7 +12,10 @@
  *= require_tree .
  */
 
-body.index{ color: #fff;}
+body.index{ 
+  color: #fff;
+  background:#333;
+}
 body.today{ 
   color: #fff;
   background:#333;
