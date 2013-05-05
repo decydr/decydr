@@ -1,33 +1,28 @@
-<h1>Listing events</h1>
+<h1>Today</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Begin time</th>
-    <th>End time</th>
-    <th>Display name</th>
-    <th>Web link</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<table class="todays-events">
 
 <% @events.each do |event| %>
   <tr>
     <td><%= event.name %></td>
-    <td><%= event.begin_time %></td>
-    <td><%= event.end_time %></td>
-    <td><%= event.display_name %></td>
-    <td><%= event.web_link %></td>
+    <td><%= event.begin_time.strftime("%-I:%M %p") %> - <%= event.end_time.strftime("%-I:%M %p") %></td>
+    <% if false %>
+      <td><%= link_to 'Show', event %></td>
+      <td><%= link_to 'Edit', edit_event_path(event) %></td>
+      <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+    <td>Liked</td>
+  </tr>
+  <tr class="details">
+    <td></td>
     <td><%= event.description %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td>
+      <%= image_tag 'mike.png', width: '30px' %>
+      <%= image_tag 'joe-dirt.jpg', width: '30px' %>
+    </td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Event', new_event_path %>

@@ -12,9 +12,28 @@
  *= require_tree .
  */
 
-body#page{ color: #fff;}
+body.index{ color: #fff;}
+body.today{ 
+  color: #fff;
+  background:#333;
+  padding-top:2em;
+}
+table.todays-events{
+  width:800px;
+}
+tr.details td{
+  color:#eee;
+  font-style:italic;
+  background:#444;
+  font-size:.8em;
+}
+body.today a{
+  font-style:italic;
+  color:#fff;
+}
 h1{
-  font-size:5em;
+ font-family: 'Open Sans', sans-serif;
+ font-size:5em;
 }
 
 #splash-tables{

@@ -6,10 +6,10 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-  <style> #page {opacity:0;}</style>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'> <style> #page {opacity:0;}</style>
 </head>
 
-<body data-spy="scroll" data-offset="10" id="page">
+<body data-spy="scroll" data-offset="10" id="page" class="<%= controller.action_name %>">
 
 <header>
     <div class="navbar navbar-fixed-top">
