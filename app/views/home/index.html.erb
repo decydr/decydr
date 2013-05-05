@@ -38,8 +38,23 @@
       <tr><td><%= link_to('and Beyond','') %></td></tr>
     </table>
   </section>
-  <section id="twitter">
-    
-  </section>
 
+</section>
+<section id="twitter">
+  <hgroup>
+    <h2>Twitter</h1>
+  </hgroup>
+  
+  <%= javascript_tag do %> 
+    $('#twitter').socialist({
+        networks: [
+            {name:'twitter',id:'mtbachelor'},
+            {name:'twitter',id:'twisitbend'}
+        ],
+        isotope:false,
+        random:false,
+        maxResults: 5,
+        fields:['source','heading','text','date']
+    });
+  <% end %>
 </section>
