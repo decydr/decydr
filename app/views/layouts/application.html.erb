@@ -7,6 +7,22 @@
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'> <style> #page {opacity:0;}</style>
+  <%= javascript_tag do %>
+            $(document).ready(function(){
+            
+            alert("foo");
+
+                window.onscroll = function() {
+                  alert("scrolling");
+                    var speed = 8.0;
+                    $("#home").style.backgroundPosition = (-window.pageXOffset / speed) + "px " + (-window.pageYOffset / speed) + "px";
+                }
+            
+
+            }
+          <% end %>
+            
+        </script>
 </head>
 
 <body data-spy="scroll" data-offset="10" id="page" class="<%= controller.action_name %>">

@@ -15,3 +15,12 @@
 //= require bootstrap-scrollspy
 //= require bootstrap-collapse
 //= require_tree .
+ 
+
+            $(document).ready(function(){
+              window.onscroll = function() {
+                var speed = 8.0;
+               $("#home").css("background-position", (-window.pageXOffset / speed) + "px " + (-window.pageYOffset / speed) + "px");
+              }
+            })
+

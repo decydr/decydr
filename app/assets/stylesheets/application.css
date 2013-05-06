@@ -22,7 +22,7 @@ body.today{
   padding-top:2em;
 }
 table.todays-events{
-  width:800px;
+  width:75%;
 }
 tr.details td{
   color:#eee;
@@ -34,9 +34,10 @@ body.today a{
   font-style:italic;
   color:#fff;
 }
-h1{
+body h1{
  font-family: 'Open Sans', sans-serif;
  font-size:5em;
+ font-weight:800;
 }
 
 #splash-tables{
